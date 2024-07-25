@@ -1,5 +1,4 @@
 <launch>
-    <node name="region_checker" pkg="region_checker" type="region_checker.py" output="screen">
-        <param name="config_file" value="$(find region_checker)/config/regions.yaml"/>
-    </node>
+    <arg name="config_file" default="$(find region_checker)/config/regions.yaml" />
+    <node name="region_checker" pkg="region_checker" type="region_checker.py" output="screen" args="$(arg config_file)"/>
 </launch>
