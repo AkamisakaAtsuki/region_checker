@@ -1,0 +1,14 @@
+node:
+  name: "region_checker"
+topics:
+  subscribe:
+    pose: "/pre_target_pose"
+  publish:
+    current_region: "/current_region"
+regions:
+  - name: "Navigable Area"
+    points:
+      - [1.0, 1.0]
+      - [5.0, 1.0]
+      - [5.0, 5.0]
+      - [1.0, 5.0]
